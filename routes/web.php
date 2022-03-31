@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,15 @@ Route::get( '/', function () {
     return view( 'welcome' );
 } );
 
-Route::get( '/dashboard', function () {
-    return view( 'dashboard' );
-} )->middleware( ['auth', 'verified'] )->name( 'dashboard' );
+// Route::get( '/dashboard', function () {
+//     return view( 'dashboard' );
+// } )->middleware( ['auth', 'verified'] )->name( 'dashboard' );
+
+Route::middleware( ['auth', 'verified'] )->group( function () {
+    Route::resource( 'dashboard', UserController::class )
+        ->parameters( [
+            'dashboard' => 'user', // nombre del parametro que se usa en las rutas ej. /vacantes/{vacante} (vacante es el parametro)
+        ] );
+} );
 
 require __DIR__ . '/auth.php';
