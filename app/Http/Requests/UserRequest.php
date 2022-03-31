@@ -23,9 +23,11 @@ class UserRequest extends FormRequest
      */
     public function rules()
     {
+        $user_exists = $this->user?->id ? ',email,' . $this->user->id : '';
+
         return [
             'name'     => 'required|string|max:255',
-            'email'    => 'required|string|email|max:255|unique:users',
+            'email'    => 'required|string|email|max:255|unique:users' . $user_exists,
             'password' => 'required|string|min:8',
         ];
     }
