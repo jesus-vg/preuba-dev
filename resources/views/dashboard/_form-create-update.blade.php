@@ -1,14 +1,3 @@
-{{-- mostrar todos los eeeroes --}}
-@if ($errors->any())
-	<div class="alert alert-danger">
-		<ul>
-			@foreach ($errors->all() as $error)
-				<li>{{ $error }}</li>
-			@endforeach
-		</ul>
-	</div>
-
-@endif
 @csrf
 <div class="flex flex-wrap">
 	<div class="w-full p-3 md:w-1/2 lg:w-1/3">
@@ -71,7 +60,7 @@
 					id="password"
 					name="password"
 					class="@error('password') border-red-500 @enderror w-full appearance-none rounded-lg border bg-gray-200 py-2 px-4 leading-tight text-gray-700 focus:border-gray-800 focus:outline-none focus:ring-gray-800"
-					value="{{ old('password', $user->password) }}"
+					value="{{ old('password') }}"
 				>
 				@error('password')
 					<x-mensaje-error-input :message="$message" />
