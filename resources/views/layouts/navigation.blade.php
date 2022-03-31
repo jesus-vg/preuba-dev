@@ -8,7 +8,7 @@
 			<div class="flex">
 				<!-- Logo -->
 				<div class="flex shrink-0 items-center">
-					<a href="{{ route('dashboard') }}">
+					<a href="{{ route('dashboard.index') }}">
 						<x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
 					</a>
 				</div>
@@ -16,8 +16,8 @@
 				<!-- Navigation Links -->
 				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
 					<x-nav-link
-						:href="route('dashboard')"
-						:active="request()->routeIs('dashboard')"
+						:href="route('dashboard.index')"
+						:active="request()->routeIs('dashboard.index')"
 					>
 						{{ __('Dashboard') }}
 					</x-nav-link>
@@ -118,8 +118,8 @@
 	>
 		<div class="space-y-1 pt-2 pb-3">
 			<x-responsive-nav-link
-				:href="route('dashboard')"
-				:active="request()->routeIs('dashboard')"
+				:href="route('dashboard.index')"
+				:active="request()->routeIs('dashboard.index')"
 			>
 				{{ __('Dashboard') }}
 			</x-responsive-nav-link>
