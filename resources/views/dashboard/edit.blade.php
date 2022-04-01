@@ -2,7 +2,7 @@
 	<x-slot name="header">
 		<ul class="flex flex-wrap">
 			<li class="text-xl font-semibold leading-tight text-gray-800 md:mr-1">
-				Crear usuario
+				Actualizar usuario
 			</li>
 		</ul>
 	</x-slot>

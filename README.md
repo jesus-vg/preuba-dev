@@ -1,5 +1,5 @@
 <h1 align="center" id="title">Prueba dev</h1>
-<img src="demo.png" alt="" width="400">
+<img src="demo.png" alt="" width="600">
 
 <p id="description">Aplicación de Laravel para la gestión de usuarios (CRUD básico).<br>Datos necesarios para la ejecución:<br></p>
 
@@ -8,16 +8,22 @@
 <p>1. Instalar las dependecias de composer:</p>
 
 ```
-composer install & php artisan migrate
+composer install
 ```
 
-<p>2. Instalar las dependecias de npm:</p>
+<p>2. Crear la BD prueba_dev y ejecutar las migraciones:</p>
+
+```
+php artisan migrate
+```
+
+<p>3. Instalar las dependecias de npm:</p>
 
 ```
 npm i
 ```
 
-<p>3. Configurar .env para usar mailtrap para envio de correos en desarrollo:</p>
+<p>4. Configurar .env para usar mailtrap para envio de correos en desarrollo:</p>
 
 ```
 MAIL_MAILER=smtp
@@ -29,13 +35,13 @@ MAIL_ENCRYPTION=null
 MAIL_FROM_ADDRESS="demo@prueba-dev.com"
 ```
 
-<p>3. Para produccion</p>
+<p>5. Para produccion</p>
 
 ```
 npm run dev
 ```
 
-<p>4. Configurar el .env para producción</p>
+<p>6. Configurar el .env para producción</p>
 
 ```
 APP_DEBUG & APP_ENV
